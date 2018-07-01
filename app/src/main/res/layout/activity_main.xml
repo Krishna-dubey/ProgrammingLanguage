@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/admin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Admin"
+            android:textSize="20sp"
+            android:layout_weight="0.5"/>
+        <RadioButton
+            android:id="@+id/viewer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Viewer"
+            android:textSize="20sp"
+            android:layout_weight="0.5"/>
+
+    </RadioGroup>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emailEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/useridEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Id"
+            android:inputType="text"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/passwordEditText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText1"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_centerHorizontal="true"
+        app:passwordToggleEnabled="true"
+        android:layout_marginTop="10dp">
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:inputType="textPassword"
+            android:hint="Password" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/passwordEditText1"
+        android:layout_marginTop="20dp"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_centerHorizontal="true"
+        android:text="Log In"
+        />
+
+
+</RelativeLayout>
